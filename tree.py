@@ -11,7 +11,7 @@ class Tree(object):
         print('{}'.format(node.data), end=' ')
         self.print_tree(node.right)
 
-    def print_leafs(self,node: Node):
+    def print_leaves(self,node: Node):
         if not node:
             return node
 
@@ -20,10 +20,10 @@ class Tree(object):
             return
 
         if node.left:
-            self.print_leafs(node.left)
+            self.print_leaves(node.left)
 
         if node.right:
-            self.print_leafs(node.right)
+            self.print_leaves(node.right)
 
     def tree_depth(self,node: Node):
         if not node:
