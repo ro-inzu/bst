@@ -44,15 +44,15 @@ class Tree(object):
             return node
 
         print(node.data, end=' ')
-        self.in_order(node.left)
-        self.in_order(node.right)
+        self.pre_order(node.left)
+        self.pre_order(node.right)
 
     def post_order(self, node: Node):
         if not node:
             return node
 
-        self.in_order(node.left)
-        self.in_order(node.right)
+        self.post_order(node.left)
+        self.post_order(node.right)
         print(node.data, end=' ')
 
     def depth_first(self, root: Node):
