@@ -2,6 +2,7 @@ from node import Node
 
 
 class Tree(object):
+    
     def in_order(self, node: Node):
         if not node:
             return node
@@ -74,6 +75,6 @@ class Tree(object):
     def make_tree(self, elements: list):
         root_node = Node(1)
         for element in elements:
-            self.insert_bst(root_node, element)
+            self.insert_node(root_node, element)
 
         return root_node
